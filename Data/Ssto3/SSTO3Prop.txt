@@ -1,0 +1,15 @@
+C*******************************************************************
+C*** * Propulsion  
+C*** * Liquid throttable engines, O2/H2 propellant,
+C*** * Max thrust at sea level 1.51e6 N.
+C*** * Specific impulse 495.4 s
+C*** * Launch mass 181,437 kg
+C*** * Fuel mass 156,194 kg
+C*** *
+C*** * Note, do not make back pressure correction
+C*** *
+C*** * MODIFICATION HISTORY
+C*** * 931013 Created by Peter Zipfel
+C*** *
+C*** **************************************************************
+C

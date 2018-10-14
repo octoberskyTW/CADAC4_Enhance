@@ -1,0 +1,65 @@
+C**********************************************************************
+C*********************** FALCON5 PROPULSION ***************************
+C**********************************************************************
+C*** * 
+C*** * * Thrust available and fuel flow tables for turbojet engine
+C*** * * Idle thrust and fuel flow tables
+C*** * * MAC c.g. location as a function of missile weight
+C*** * * Note: Power on/off drag adjustments are made by the thrust
+C*** *   calculations 
+C*** * * Typical take-off mass  12701 kg
+C*** * * Typical fuel mass   4461 kg
+C*** *
+C*** * MODIFICATION HISTORY
+C*** * 000214 Created by Peter Zipfel
+C*** *
+C*** ******************************************************************
+C
+C*** THRUST AVAILABLE AT SL AND 3K METERS VS MACH IN NEWTONS
+C
+C*** Mach 0.4  0.6  0.8  1.0 (4 columns across)
+C*** Altitude - m  0 3000 (2 rows down)
+C
+      56160., 56338., 55191., 52104.,
+      41451., 43875., 45316., 43906.
+C
+C*** FUEL FLOW IN KG/SEC
+C
+C*** Mach 0.4  0.6  0.8  1.0 (4 columns across)
+C*** Thrust - N  -13344  0 13344  26688  40032  56045 (6 rows down)
+C*** Altitude - m  0  3000 (2 blocks)   
+C
+C*** SEA LEVEL FUEL FLOW (ROWS-THRUST, COLUMNS-MACH)
+C
+         0.0,    0.0,  .1701,  .4624,
+       .1512,  .2470,  .3906,  .6766,
+       .4095,  .4964,  .6300,  .9173,
+       .6804,  .7623,  .8870, 1.1844,
+       .9828, 1.0710, 1.2033, 1.4780,
+      1.3797, 1.4868, 1.6191, 1.8396,
+C
+C*** FUEL FLOW AT 3000 M ALT.
+C
+        0.0,     0.0,  .0504,  .2394,
+       .1008,  .1663,  .2583,  .4586,
+       .3528,  .4095,  .4977,  .6905,
+       .6350,  .7018,  .7812,  .9639,
+       .9677, 1.0332, 1.1189, 1.2852,
+      1.3986, 1.4805, 1.5624, 1.7136 
+C
+C*** MEAN AERODYNAMIC CORD (MAC) AS A FUNCTION OF VEHICLE MASS 
+C
+C*** Vehicle mass - kg 9786 10567  11142  11660  14247  
+C
+      .4198, .3293, .3055, .3171, .3066/
+C
+C*** IDLE POWER THRUST (ROWS-ALTITUDE,COLUMNS-MACH)
+C
+C*** Mach 0.4  0.6  0.8  1.0 (4 columns across)
+C*** Altitude - m  0  3000  6000 9000 12000 (5 rows down)
+C
+        286., -4461., -11907., -15870.,
+        136., -3034.,  -8393.,  -6232.,
+       1543., -1205.,  -5613.,  -2544.,
+       3416.,  1695.,  -1103.,  -1374.,
+       5115.,  4043.,   2647.,   -810.
